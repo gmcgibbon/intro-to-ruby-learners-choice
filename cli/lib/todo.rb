@@ -2,7 +2,7 @@ require 'cli/ui'
 require 'cli/kit'
 require 'yaml'
 require 'pathname'
-require 'todo_list'
+require 'todo/list'
 
 CLI::UI::StdoutRouter.enable
 
