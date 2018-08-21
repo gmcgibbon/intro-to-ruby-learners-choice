@@ -4,7 +4,7 @@ module Todo
   module Commands
     class Add < Todo::Command
       def call(args, _name)
-        TodoList.add(*args)
+        Todo::List.add(*args)
       end
 
       def self.help
