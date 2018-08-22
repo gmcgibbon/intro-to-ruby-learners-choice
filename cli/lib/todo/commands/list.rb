@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'todo'
 
 module Todo
@@ -8,7 +10,7 @@ module Todo
       end
 
       def self.help
-        "Lists the todo list"
+        'Lists the todo list'
       end
     end
   end

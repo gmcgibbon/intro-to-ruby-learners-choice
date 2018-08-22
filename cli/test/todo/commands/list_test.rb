@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 module Todo
@@ -5,7 +7,7 @@ module Todo
     class ListTest < Todo::CommandTestCase
       def setup
         super
-        Todo::List.list = %w(Apples Oranges Bananas)
+        Todo::List.list = %w[Apples Oranges Bananas]
       end
 
       def test_list_prints_a_numbered_list

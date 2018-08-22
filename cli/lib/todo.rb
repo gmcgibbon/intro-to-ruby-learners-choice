@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'cli/ui'
 require 'cli/kit'
 require 'yaml'
@@ -10,7 +12,7 @@ module Todo
   extend CLI::Kit::Autocall
 
   TOOL_NAME = 'todo'
-  ROOT      = File.expand_path('../..', __FILE__)
+  ROOT      = File.expand_path('..', __dir__)
   LOG_FILE  = '/tmp/todo.log'
 
   autoload(:EntryPoint, 'todo/entry_point')
