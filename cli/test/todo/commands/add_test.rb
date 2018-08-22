@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 module Todo
@@ -10,7 +12,7 @@ module Todo
 
       def test_add_adds_multiple_items
         invoke(Add, 'Kiwis', 'Strawberries')
-        assert_equal ['Kiwis', 'Strawberries'], Todo::List.list
+        assert_equal %w[Kiwis Strawberries], Todo::List.list
       end
     end
   end

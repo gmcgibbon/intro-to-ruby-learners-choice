@@ -2,5 +2,5 @@ up:
   - ruby: 2.5.1
   - bundler
 commands:
-  test:
-    run: bin/test
+  test: bin/test
+  style: bundle exec rubocop --auto-correct
