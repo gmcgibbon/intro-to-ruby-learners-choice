@@ -1,4 +1,4 @@
-## How To Use Require
+## How to use Require
 
 ### `require`
 
