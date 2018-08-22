@@ -1,12 +1,20 @@
 require 'erb'
 require 'ostruct'
 
-folder_path = File.dirname(File.expand_path(__FILE__))
+FOLDER_PATH = File.dirname(File.expand_path(__FILE__))
 
-erb_file = ERB.new(File.read("#{folder_path}/lib/greeting.html.erb"))
+def render(file, variables)
+  erb_file = ERB.new(File.read("#{FOLDER_PATH}/lib/#{file}"))
+  context = OpenStruct.new(variables).instance_eval { binding }
+  erb_file.run(context)
+end
 
-context_variables = { name: 'Gannon' }
+# greeting html
 
-context = OpenStruct.new(context_variables).instance_eval { binding }
+puts render('greeting.html.erb', name: 'Gannon')
+puts
 
-puts erb_file.run(context)
+# shopping html
+
+puts render('shopping.html.erb', list: ['Rocket Shoes', 'Invisible Ink'])
+puts
